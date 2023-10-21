@@ -12,13 +12,7 @@ app.use(express.static('public'));
 
 
 // Rutas
-// app.get('/', (req, res) => {
-//     res.json({
-//         ok: true,
-
-//     })
-// })
-
+app.use('/api/auth', require('./routes/auth'));
 
 
 // Escuchar peticiones
