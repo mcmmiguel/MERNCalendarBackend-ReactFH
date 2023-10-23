@@ -11,18 +11,19 @@ const app = express();
 dbConnection();
 
 //CORS
-app.useCors(cors());
+app.use(cors());
 
 // Directorio público
 app.use(express.static('public'));
 
 
 // Lectura y Parseo del body
-app.use(express.json())
+app.use(express.json());
 
 
 // Rutas
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/events', require('./routes/events'));
 
 
 // Escuchar peticiones
